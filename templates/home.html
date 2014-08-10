@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple home page listing the apis</title>
+</head>
+<body>
+    <h2>List of Apis</h2>
+
+    <ul>
+        <li>
+            <h3>Get User's Friend</h3>
+            <strong>/friends/user-id</strong>
+            <p>
+                Try : <a href="/friends/1">/friends/1</a>
+            </p>
+        </li>
+
+        <li>
+            <h3>Get User's Friends of Friends</h3>
+            <strong>/friends/friends/user-id</strong>
+            <p>
+                Try : <a href="/friends/friends/3">/friends/friends/3</a>
+            </p>
+        </li>
+
+         <li>
+            <h3>Get Recommendation for the users if the number of friends the user has >= 2</h3>
+            <strong>/friends/recommendation/user-id</strong>
+             <p>
+                Try : <a href="/friends/recommendation/5">/friends/recommendation/5</a>
+            </p>
+        </li>
+    </ul>
+</body>
+</html>
