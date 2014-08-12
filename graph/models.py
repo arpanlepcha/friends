@@ -22,17 +22,3 @@ class Profile(models.Model):
     def friend_list(self):
         return [friend.pk for friend in self.friends.all()]
 
-def util(d):
-    friend_list = {}
-
-    for user in d:
-        friend_list[user.get('id')] = user.pop('friends', None)
-        user['name'] = user.pop('firstName')
-        p = Profile(**user)
-        p.save()
-
-    for key, value in friend_list.iteritems():
-        p = Profile.objects.get(pk=key)
-        for user in value:
-            f = Profile.objects.get(pk=user)
-            p.friends.add(f)
